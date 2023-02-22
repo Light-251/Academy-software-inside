@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /*
  * inserire un numero e calcolare la media da 1 al numero inserito
  */
@@ -13,8 +14,8 @@ public class EsCicli12 {
 		scanner.close();
 
 		double somma = 0;
-		int i=0;
-		
+		int i = 0;
+
 		while (i <= numeroUtente) {
 			somma += i;
 			System.out.println("Somma: " + somma + ", indice : " + i);

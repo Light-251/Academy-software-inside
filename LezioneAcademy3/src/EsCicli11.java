@@ -13,8 +13,8 @@ public class EsCicli11 {
 
 		scanner.close();
 
-		while (i <= 100) { // TODO ottimizzare ciclo
-				System.out.print(i + " ");
+		while (i <= 100) {
+			System.out.print(i + " ");
 
 			i += numero;
 			cont++;
