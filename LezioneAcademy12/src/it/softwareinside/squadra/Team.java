@@ -15,12 +15,14 @@ public class Team {
 
 	public Team() {
 		this("Default Team", 0, new Allenatore());
-		setPlayers(new Player[11]);
+		//setPlayers(new Player[11]);
 	}
 
 	public void stampaPlayer() {
 		for (Player player : players)
 			System.out.println(player);
+		
+		System.out.println("Allenatore: " + allenatore);
 	}
 
 	public boolean addPlayer(Player player) {
@@ -38,7 +40,7 @@ public class Team {
 	}
 	
 	public Player removePlayer(int index) {
-		if(index < 0 || index > 11)
+		if(index < 0 || index >= players.length)
 			return null;
 		
 		Player giocatoreRimosso = players[index];
@@ -50,9 +52,13 @@ public class Team {
 
 	@Override
 	public String toString() {
+		String ris = "";
+		
+		for(Player player : players)
+			ris += player + "\n";
 
 		return "Nome: " + nome + " Numero Trofei: " + numeroTrofei + " Allenatore: " + allenatore + " Giocatori: "
-				+ players;
+				+ ris;
 	}
 
 	public void setNome(String nome) {
@@ -64,11 +70,13 @@ public class Team {
 	}
 
 	public void setPlayers(Player[] players) {
-		this.players = players;
+		if(players.length == 11)
+			this.players = players;
 	}
 
 	public void setNumeroTrofei(int numeroTrofei) {
-		this.numeroTrofei = numeroTrofei;
+		if(numeroTrofei > this.numeroTrofei)
+			this.numeroTrofei = numeroTrofei;
 	}
 
 	public String getNome() {
