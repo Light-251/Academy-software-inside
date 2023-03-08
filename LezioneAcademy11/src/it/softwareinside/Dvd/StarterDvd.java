@@ -36,13 +36,19 @@ public class StarterDvd {
 		}while(prezzoDaCercare < 2.99 || prezzoDaCercare > 15.00);
 		
 		scanner.close();
+		
+		boolean isFound = false;
 
 		for (Dvd dvd : arrayDvd) {
 			if (dvd.getGenere().equalsIgnoreCase(titoloDaCercare))
-				if (dvd.getCosto() <= prezzoDaCercare)
+				if (dvd.getCosto() <= prezzoDaCercare) {
 					System.out.println(dvd);
+					isFound = true;
+				}
 		}
-
+		
+		if(!isFound)
+			System.out.println("Non ho trovato nulla :(");
 	}
 
 }

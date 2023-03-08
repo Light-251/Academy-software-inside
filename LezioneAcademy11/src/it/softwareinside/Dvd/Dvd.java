@@ -66,9 +66,11 @@ public class Dvd {
 		case "Commedia":
 			this.isFamilyFriendly = true;
 			this.titolo = titoliFilm[random.nextInt(6,9)];
+			break;
 		default:
-			this.titolo = titoliFilm[random.nextInt(9,12)];
 			this.isFamilyFriendly = random.nextBoolean();
+			this.titolo = titoliFilm[random.nextInt(9,12)];
+			break;
 		}
 	}
 
@@ -104,12 +106,15 @@ public class Dvd {
 	public void isFamilyFriendly(boolean isFamilyFriendly) {
 		this.isFamilyFriendly = isFamilyFriendly;
 	}
+	
+	
 
 	/**
 	 * Sceglie un genere casuale tra un array di Stringhe
 	 * 
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private String generaGenere() {
 		Random random = new Random();
 		String[] arrayGeneri = { "Horror", "Thriller", "Commedia", "Fantasy" };
@@ -123,6 +128,7 @@ public class Dvd {
 	 * 
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private double generaCosto() {
 		Random random = new Random();
 		double costoRandom = random.nextDouble(2.99, 16);
@@ -135,10 +141,13 @@ public class Dvd {
 	 * 
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private boolean generaIsFamilyFriendly() {
 		Random random = new Random();
 		boolean isFamilyFriendlyRandom = random.nextBoolean();
 
 		return isFamilyFriendlyRandom;
 	}
+	
+	
 }
