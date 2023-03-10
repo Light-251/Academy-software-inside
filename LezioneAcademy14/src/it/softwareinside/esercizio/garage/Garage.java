@@ -53,7 +53,7 @@ public class Garage {
 	 * 
 	 */
 	public void stampaSituazionePosti() {
-		for(VeicoliAMotore veicolo : veicoli)
+		for(VeicoliAMotore veicolo : this.veicoli)
 			System.out.println(veicolo);
 	}
 	

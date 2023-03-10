@@ -33,6 +33,10 @@ public class StarterGarage {
 		int pos = scanner.nextInt();
 		scanner.close();
 		
+		for (int i = 0; i < 34; i++) {
+			System.out.println(garage.immettiNuovoVeicolo(automobile));
+		}
+		
 
 		if(garage.estraiVeicolo(pos) != null) {
 			garage.stampaSituazionePosti();
