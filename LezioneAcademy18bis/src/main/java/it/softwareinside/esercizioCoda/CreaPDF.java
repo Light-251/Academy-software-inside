@@ -25,21 +25,10 @@ public class CreaPDF {
 
 		document.addPage(myPage);// Aggiunge una pagina al PDF
 		document.save(
-				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf");// salva
-																																	// un
-																																	// PDF
-																																	// nel
-																																	// percorso
-																																	// indicato
+				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf");// salva un PDF nel percorso indicato
 
 		File file = new File(
-				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf"); // carica
-																																	// un
-																																	// file
-																																	// esistente
-																																	// fornendo
-																																	// il
-																																	// percorso
+				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf"); // carica un file esistente fornendo il percorso
 		PDDocument documento = PDDocument.load(file);// carica il file nell'oggetto document
 		PDPage page = documento.getPage(0);
 		PDPageContentStream contentStream = new PDPageContentStream(documento, page);
