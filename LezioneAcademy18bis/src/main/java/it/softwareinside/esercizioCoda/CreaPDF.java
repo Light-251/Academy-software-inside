@@ -24,11 +24,11 @@ public class CreaPDF {
 		// ---------------------------------------------
 
 		document.addPage(myPage);// Aggiunge una pagina al PDF
-		document.save(
-				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf");// salva un PDF nel percorso indicato
+		document.save("D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf");// salva un PDF nel percorso indicato
 
-		File file = new File(
-				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf"); // carica un file esistente fornendo il percorso
+		document.close();
+		
+		File file = new File("D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf"); // carica un file esistente fornendo il percorso
 		PDDocument documento = PDDocument.load(file);// carica il file nell'oggetto document
 		PDPage page = documento.getPage(0);
 		PDPageContentStream contentStream = new PDPageContentStream(documento, page);
@@ -41,8 +41,7 @@ public class CreaPDF {
 		System.out.println(text);
 		contentStream.endText();// punto di fine del testo
 		contentStream.close();// Chiude la classe ContentStream
-		documento.save(
-				"D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf");
+		documento.save("D:/PROGETTI/Eclipse/Workspace/LezioneAcademy18bis/src/main/java/it/softwareinside/esercizioCoda/PDF/prova1.pdf");
 		documento.close();// Chiude il documento
 
 	}
